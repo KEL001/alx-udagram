@@ -33,7 +33,6 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
   app.get("/filteredimage", async (req: Request, res: Response): Promise<Response> => {
     try {
       const {image_url} = req.query;
-      console.log('image_url', image_url);
       if (!image_url) {
         return res.status(400)
             .send({success: false, errorMsg: 'Image URL not specified'})
